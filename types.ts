@@ -1,6 +1,7 @@
 export interface StockData {
   ticker: string;
   companyName: string;
+  peRatio: string;
   news: string[];
   pros: string[];
   cons:string[];

@@ -21,19 +21,20 @@ const PerformanceChart: React.FC<PerformanceChartProps> = ({ data, tickers }) =>
             bottom: 5,
           }}
         >
-          <CartesianGrid strokeDasharray="3 3" stroke="#4a5568" />
-          <XAxis dataKey="name" stroke="#a0aec0" tick={{ fill: '#a0aec0' }} />
-          <YAxis stroke="#a0aec0" tick={{ fill: '#a0aec0' }} domain={[0, 'dataMax + 10']} />
+          <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
+          <XAxis dataKey="name" stroke="#718096" tick={{ fill: '#718096' }} />
+          <YAxis stroke="#718096" tick={{ fill: '#718096' }} domain={[0, 'dataMax + 10']} />
           <Tooltip 
             contentStyle={{ 
-              backgroundColor: '#1a202c', 
-              border: '1px solid #4a5568',
-              color: '#e2e8f0'
+              backgroundColor: '#ffffff', 
+              border: '1px solid #e2e8f0',
+              color: '#1a202c',
+              boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)'
             }} 
-            itemStyle={{ color: '#e2e8f0' }}
-            cursor={{ fill: 'rgba(100, 116, 139, 0.2)' }}
+            itemStyle={{ color: '#4a5568' }}
+            cursor={{ fill: 'rgba(226, 232, 240, 0.5)' }}
           />
-          <Legend wrapperStyle={{ color: '#e2e8f0' }} />
+          <Legend wrapperStyle={{ color: '#4a5568' }} />
           {tickers.map((ticker, index) => (
             <Line
               key={ticker}

@@ -24,6 +24,7 @@ function buildPrompt(tickers: string[]): string {
         {
           "ticker": "string",
           "companyName": "string",
+          "peRatio": "string",
           "news": ["string"],
           "pros": ["string"],
           "cons": ["string"]
@@ -44,6 +45,7 @@ function buildPrompt(tickers: string[]): string {
     - "stocks": An array of objects, one for each ticker provided. The order should match the input tickers.
         - "ticker": The stock ticker symbol (e.g., "AAPL").
         - "companyName": The full name of the company.
+        - "peRatio": The current P/E (Price-to-Earnings) ratio of the stock. If negative or not applicable, state "N/A".
         - "news": An array of at least 3 strings, each summarizing a recent, significant news item about the company.
         - "pros": An array of at least 3 strings, outlining the key strengths and investment advantages of this stock.
         - "cons": An array of at least 3 strings, outlining the key weaknesses and investment risks of this stock.

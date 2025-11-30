@@ -9,11 +9,11 @@ const ChartBarIcon: React.FC<{className: string}> = ({ className }) => (
 
 const Header: React.FC = () => {
   return (
-    <header className="bg-gray-900/80 backdrop-blur-sm border-b border-gray-700 shadow-md sticky top-0 z-10">
+    <header className="bg-white/80 backdrop-blur-sm border-b border-gray-200 shadow-sm sticky top-0 z-10">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-center">
-            <ChartBarIcon className="w-8 h-8 text-sky-400" />
-            <h1 className="ml-3 text-2xl font-bold text-white tracking-wider">
+            <ChartBarIcon className="w-8 h-8 text-sky-600" />
+            <h1 className="ml-3 text-2xl font-bold text-gray-900 tracking-wider">
                 AI Stock Comparator
             </h1>
         </div>

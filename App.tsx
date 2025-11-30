@@ -48,11 +48,11 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-gray-900 text-gray-100 font-sans">
+    <div className="min-h-screen flex flex-col bg-gray-50 text-gray-900 font-sans">
       <Header />
       <main className="flex-grow container mx-auto px-4 py-8">
         <div className="max-w-4xl mx-auto">
-          <p className="text-center text-gray-400 mb-8">
+          <p className="text-center text-gray-600 mb-8">
             Enter up to {MAX_STOCKS} stock tickers to get a detailed, AI-powered investment analysis.
             We use Google's Gemini model with real-time search grounding for up-to-date insights.
           </p>
@@ -64,7 +64,7 @@ const App: React.FC = () => {
             isLoading={isLoading}
           />
           {error && (
-            <div className="mt-6 bg-red-900/50 border border-red-600 text-red-300 px-4 py-3 rounded-lg text-center">
+            <div className="mt-6 bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg text-center">
               {error}
             </div>
           )}

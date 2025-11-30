@@ -42,7 +42,7 @@ const StockInput: React.FC<StockInputProps> = ({
   const canCompare = tickers.length >= 2;
 
   return (
-    <div className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-gray-700">
+    <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-200">
       <div className="flex flex-wrap sm:flex-nowrap gap-4 items-center">
         <input
           type="text"
@@ -50,14 +50,14 @@ const StockInput: React.FC<StockInputProps> = ({
           onChange={(e) => setInputValue(e.target.value)}
           onKeyPress={handleKeyPress}
           placeholder={canAdd ? "Enter stock ticker (e.g., AAPL)" : `Max ${MAX_STOCKS} stocks reached`}
-          className="flex-grow bg-gray-900 border border-gray-600 rounded-md py-3 px-4 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-sky-500 transition duration-200"
+          className="flex-grow bg-gray-50 border border-gray-300 rounded-md py-3 px-4 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-sky-500 transition duration-200"
           disabled={!canAdd || isLoading}
           maxLength={10}
         />
         <button
           onClick={handleAdd}
           disabled={!canAdd || isLoading || !inputValue.trim()}
-          className="w-full sm:w-auto px-6 py-3 bg-sky-600 text-white font-semibold rounded-md hover:bg-sky-500 disabled:bg-gray-600 disabled:cursor-not-allowed transition duration-200"
+          className="w-full sm:w-auto px-6 py-3 bg-sky-600 text-white font-semibold rounded-md hover:bg-sky-500 disabled:bg-gray-300 disabled:cursor-not-allowed transition duration-200"
         >
           Add
         </button>
@@ -67,12 +67,12 @@ const StockInput: React.FC<StockInputProps> = ({
         {tickers.map((ticker) => (
           <div
             key={ticker}
-            className="flex items-center bg-gray-700 text-gray-200 rounded-full px-4 py-1 text-sm font-medium"
+            className="flex items-center bg-gray-100 text-gray-800 rounded-full px-4 py-1 text-sm font-medium border border-gray-200"
           >
             <span>{ticker}</span>
             <button
               onClick={() => onRemoveTicker(ticker)}
-              className="ml-2 text-gray-400 hover:text-white"
+              className="ml-2 text-gray-500 hover:text-red-500 transition-colors"
               disabled={isLoading}
             >
               <XIcon className="w-4 h-4" />
@@ -85,7 +85,7 @@ const StockInput: React.FC<StockInputProps> = ({
         <button
           onClick={onCompare}
           disabled={!canCompare || isLoading}
-          className="w-full sm:w-auto px-8 py-3 bg-green-600 text-white font-bold rounded-lg hover:bg-green-500 disabled:bg-gray-600 disabled:cursor-not-allowed transition-transform duration-200 transform hover:scale-105"
+          className="w-full sm:w-auto px-8 py-3 bg-green-600 text-white font-bold rounded-lg hover:bg-green-500 disabled:bg-gray-300 disabled:cursor-not-allowed transition-transform duration-200 transform hover:scale-105"
         >
           {isLoading ? 'Analyzing...' : 'Compare Stocks'}
         </button>

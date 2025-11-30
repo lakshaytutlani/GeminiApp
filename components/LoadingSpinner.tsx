@@ -4,7 +4,7 @@ const LoadingSpinner: React.FC = () => {
   return (
     <div className="flex flex-col items-center justify-center space-y-4 my-10">
       <svg
-        className="animate-spin h-12 w-12 text-sky-400"
+        className="animate-spin h-12 w-12 text-sky-600"
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
@@ -23,8 +23,8 @@ const LoadingSpinner: React.FC = () => {
           d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
         ></path>
       </svg>
-      <p className="text-gray-300 text-lg font-medium">AI is analyzing the stocks...</p>
-      <p className="text-gray-400 text-sm">This may take a moment.</p>
+      <p className="text-gray-700 text-lg font-medium">AI is analyzing the stocks...</p>
+      <p className="text-gray-500 text-sm">This may take a moment.</p>
     </div>
   );
 };
